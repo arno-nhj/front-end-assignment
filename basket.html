@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Audiowide">
     <meta name="viewport" content="height=device-height, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <head>
-        <center><img src="Sahara Icon.jpg" alt="Sahara Icon" style="width:1024px;height:256px;"></center>
+        <nav>
+            <img src="Sahara Icon.jpg" alt="Sahara Icon" style="width:256px;height:64px;max-width: fit-content;">
+            <ul>
+                <li><a href="course work.html">Sahara</a></li>
+                <li><a href="stock.html">Stock</a></li>
+                <li><a href="basket.html">Basket</a></li>
+                <li><a href="sign up.html">Sign up</a></li>
+            </ul>
+        </nav>
         <title>Hongji Nie 39150534</title>
     </head>
     <body>
         <center><h1>😄Welcome to Sahara😄</h1></center>
         <center><h2>Biggest brand, lowest price</h2></center>
-        <nav>
-            
-            <center><a href="course work.html">Sahara</a>
-                <a href="stock.html">Stock</a>
-                <a href="basket.html">Basket</a></center>
-            <a href="sign up.html" style="float: right">Sign up</a>
-        </nav>
+        <div class="cart" style="overflow-x:auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">In total</td>
+                        <td id="totalPrice">0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <button class="checkout" href="checkout.html">Check out</button>
+        <p id="aboutus">Sahara enable you to purchase everything you want in the lowest price you couldn't imagine.</p>
     </body>
     <footer>
         <p style="float:right">&copy;Sahara Co</p>

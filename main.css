@@ -1,46 +1,277 @@
-        
+/*framework*/
+@media screen and (max-width: 600px) {
+    img {
+        size-adjust: auto;
+    }
+    div{
+        font-size: 30px;
+    }
+
+    }
+@media screen and (max-width: 800px) {
+    div,img {
+        width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    }
 body{
-    background-color: rgb(209, 200, 111);
+    background-image: url('sahara\ picture.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     min-height:100%;
-    min-width:100%;
+    width: 100%;
+    margin: 0px;
+    color: #ffffff;
 }
 h1{
     font-family: "Sofia", sans-serif;
     font-size: xx-large;
+    margin: 100px;
+    color: #ffffff;
+}
+h2{
+    margin: 50px;
+    color: #ffffff;
 }
 nav{
     font-family: "Audiowide", sans-serif;
-    background-color: rgb(6, 117, 30);
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 191, 255);
     width: 100%;
     font-size: x-large;
-    overflow: auto; /* Enable scrolling if the nav has too much content */
-    
+    box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
 }
-footer{
-    float:right;
+ul li {
+    position: relative;
+    margin: 0 20px;
+    list-style: none;
+    display: inline-block;
+    padding: 14px;
+    font-size: 17px;
 }
-.shortcuts{
+ul li a{
+    text-decoration: none; 
+    cursor: pointer;
+}
+ul li a:hover {
+    background-color: rgb(129, 123, 123);
+}
+
+.container-fluid{
+    max-width: 100%;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: space-around;
 }
-.shortcuts div{
-    margin-top: 100px;
+.container-fluid a:hover{
+    box-shadow: 10px 10px 10px 10px rgba(20,20,20,0.4); 
+}
+.container-fluid div{
+    max-width: 100%;
     padding: 100px;
     box-sizing: border-box;
-    border: 2px solid rgb(5, 5, 5);
-    border-radius: 4px;
+    border: 10px solid rgb(5, 5, 5);
+    background-color: rgb(236, 218, 155);
 }
-.shortcuts img{
-    object-fit: cover;
+.container-fluid img{
+    object-fit:fill;
 }
 #signup-form{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    max-width: 100%;
+    padding:25px;
     box-sizing: border-box;
     border: 2px solid rgb(5, 5, 5);
     border-radius: 4px;
+    display: flexbox;
+    margin:100px;
+
 }
+#aboutus{
+    margin-top: 200px;
+    border-top: 1px solid rgb(5, 5, 5);
+    padding-top: 50px;
+    text-align: center;
+    color: #ffffff;
+    
+}
+footer{
+    float:right;
+    font-size: xx-small;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*signup page and login page*/
+.box{
+    width: 380px;
+    height: 380px;
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.box img{
+	width:100px;
+    margin-top:-50px ;
+}
+.header a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+	display: inline-flex;
+    padding-left: 25px;
+    padding-right: 25px;
+	justify-content: center;
+    cursor:pointer;
+}
+
+.header .active {
+    color: #df80ff;
+	font-weight: bold;
+	position: relative;
+}
+
+.header .active:after {
+	position: absolute;
+    border: none;
+	content: "";
+}
+
+#errorMsg{
+    color:red;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+
+}
+
+.content{
+    display: inline-flex;
+    overflow: hidden;
+}
+
+form {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+	flex-shrink: 0;
+	flex-direction: column;
+	transition: right 0.5s;
+}
+
+.login a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.extend form {
+	right: 100%;
+}
+
+input[type=text], input[type=password], input[type=email]{
+	display:block;
+    position: relative;
+	border: 4px solid #ffffff;
+	padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+ 	box-sizing: border-box;
+    font-size: 17px;
+    outline: none;
+}
+
+input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
+    border: 4px solid #df80ff;
+
+}
+
+input[type=submit]{
+    display:block;
+    position: relative;
+    border: 3px solid #df80ff;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 25px;
+    background-color:#600080 ;
+    text-align:center;
+    font-size: 20px;
+    color: #ffffff;
+	cursor:pointer;
+    outline: none;
+}
+	
+input[type=submit]:hover{
+	 background-color:#ffffff;
+     color: #000000;
+     font-weight: bold;
+}
+input[type=checkbox]{
+    background-color:#df80ff;
+}
+#check{
+    margin-top: 10px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+
+/*basket page*/
+
+.cart table {
+    max-width: 100%;
+    margin: 20px;
+    width: 97%;
+    border: 1px solid black;
+    background-color:white;
+    color: black;
+    flex: auto;
+}
+th {
+    height: 70px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #600080;
+    color: white;
+}
+td {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.checkout{
+    font-size: larger;
+    margin-top: 20px;
+    margin-right:20px;
+    float: right;
+}
+.checkout:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
