@@ -1,25 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <meta name="viewport" content="height=device-height, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="main.css">
     <head>
-        <center><img src="Sahara Icon.jpg" alt="Sahara Icon" style="width:1024px;height:256px;"></center>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <meta name="viewport" content="height=device-height, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <nav>
+            <img src="Sahara Icon.png" alt="Sahara Icon" style="height:64px;max-width: fit-content;">
+            <ul>
+                <li><a href="course work.html">Sahara</a></li>
+                <li><a href="stock.html">Stock</a></li>
+                <li><a href="basket.html">Basket</a></li>
+                <li><a href="sign up.html">Sign up</a></li>
+            </ul>
+        </nav>
         <title>Hongji Nie 39150534</title>
     </head>
     <body>
+        
         <center><h1>😄Welcome to Sahara😄</h1></center>
         <center><h2>Biggest brand, lowest price</h2></center>
-        <nav>
-            
-            <center><a href="course work.html">Sahara</a>
-                <a href="stock.html">Stock</a>
-                <a href="basket.html">Basket</a></center>
-            <a href="sign up.html" style="float: right">Sign up</a>
-        </nav>
+        <section id="cart">
+            <h2>Your Cart<br><br></h2>
+            <ul id="cart-items" class="list-group"></ul>
+        </section>
+        <p id="totalprice">Total Price: <span id="total-price">￡0.00</span></p>
+        <script>
+
+            function calculateTotal() {
+    
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+                const totalElement = document.getElementById('total-price');
+    
+                const cartItems = document.getElementById('cart-items');
+    
+                let total = 0;
+    
+                cartItems.innerHTML = '';
+    
+                cart.forEach(item => {
+    
+                    total += item.price;
+    
+                    const listItem = document.createElement('li');
+    
+                    listItem.textContent = `${item.productName}: £${item.price.toFixed(2)}`;
+                    listItem.classList.add('list-group-item');
+                    cartItems.appendChild(listItem);
+    
+                });
+    
+                totalElement.textContent = `£${total.toFixed(2)}`;
+    
+            }
+    
+                calculateTotal();
+
+        </script>
+        <button class="checkout" href="checkout.html">Check out</button>
+        <p id="aboutus">Sahara enable you to purchase everything you want in the lowest price you couldn't imagine.<br>
+            Contact us:<br>
+            Phone: 07536922175
+            Email:niehongji9@gmail.com
+        </p>
+        
     </body>
     <footer>
         <p style="float:right">&copy;Sahara Co</p>
