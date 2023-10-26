@@ -1,46 +1,277 @@
-        
+/*framework*/
+@media screen and (max-width: 600px) {
+    img {
+        max-width: 100%;
+    }
+    div{
+        font-size: 30px;
+    }
+    }
+@media screen and (max-width: 800px) {
+    div,img {
+        max-width: 100%; 
+    }
+    }
 body{
-    background-color: rgb(209, 200, 111);
+    background-image: url('sahara\ picture.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     min-height:100%;
-    min-width:100%;
+    max-width: 100%;
+    margin: 0px;
+    color: #ffffff;
 }
 h1{
     font-family: "Sofia", sans-serif;
     font-size: xx-large;
+    margin: 100px;
+    color: #ffffff;
+}
+h2{
+    margin: 50px;
+    color: #ffffff;
 }
 nav{
     font-family: "Audiowide", sans-serif;
-    background-color: rgb(6, 117, 30);
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 191, 255);
     width: 100%;
     font-size: x-large;
-    overflow: auto; /* Enable scrolling if the nav has too much content */
-    
+    box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
 }
-footer{
-    float:right;
+ul li {
+    position: relative;
+    margin: 0 20px;
+    list-style: none;
+    display: inline-block;
+    padding: 14px;
+    font-size: 17px;
 }
-.shortcuts{
+ul li a{
+    text-decoration: none; 
+    cursor: pointer;
+}
+ul li a:hover {
+    background-color: rgb(129, 123, 123);
+}
+.container{
+    max-width: 100%;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: space-around;
 }
-.shortcuts div{
-    margin-top: 100px;
+.container a:hover{
+    box-shadow: 10px 10px 10px 10px rgba(20,20,20,0.4); 
+}
+.container div{
+    max-width: 100%;
     padding: 100px;
     box-sizing: border-box;
-    border: 2px solid rgb(5, 5, 5);
-    border-radius: 4px;
+    border: 7px solid rgb(255, 255, 255);
+    background-color: rgb(255,176,46);
 }
-.shortcuts img{
-    object-fit: cover;
+.container img{
+    object-fit:fill;
 }
 #signup-form{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    max-width: 100%;
+    padding:25px;
     box-sizing: border-box;
     border: 2px solid rgb(5, 5, 5);
     border-radius: 4px;
+    margin:100px;
+}
+#aboutus{
+    margin-top: 200px;
+    border-top: 1px solid rgb(5, 5, 5);
+    padding-top: 50px;
+    text-align: center;
+    color: #ffffff;
+}
+footer{
+    float:right;
+    font-size: xx-small;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*signup page and login page*/
+.box{
+    width: 380px;
+    height: 380px;
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+.header a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+	display: inline-flex;
+    padding-left: 25px;
+    padding-right: 25px;
+	justify-content: center;
+    cursor:pointer;
+}
+.header .active {
+    color: rgb(255,176,46);
+	font-weight: bold;
+	position: relative;
+}
+.header .active:after {
+	position: absolute;
+    border: none;
+	content: "";
+}
+#errorMsg{
+    color:red;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+.content{
+    display: inline-flex;
+    overflow: hidden;
+}
+form {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+	flex-shrink: 0;
+	flex-direction: column;
+	transition: right 0.5s;
+}
+.login a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.extend form {
+	right: 100%;
+}
+input[type=text], input[type=password], input[type=email]{
+	display:block;
+    position: relative;
+	border: 4px solid #ffffff;
+	padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+ 	box-sizing: border-box;
+    font-size: 17px;
+    outline: none;
+}
+input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
+    border: 4px solid rgb(255,176,46);
+}
+input[type=submit]{
+    display:block;
+    position: relative;
+    border: 3px solid white;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 25px;
+    background-color:rgb(255,176,46) ;
+    text-align:center;
+    font-size: 20px;
+    color: #ffffff;
+	cursor:pointer;
+    outline: none;
+}	
+input[type=submit]:hover{
+	 background-color:#ffffff;
+     color: #000000;
+     font-weight: bold;
+}
+
+
+/*basket page*/
+
+
+.checkout{
+    padding:5px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: larger;
+    margin-top: 20px;
+    margin-right:20px;
+    float: right;
+}
+.checkout:active{
+    background-color:rgb(255,176,46) ;
+}
+.checkout:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+section{
+    border: 3px solid white;
+    border-radius: 4px;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*stock page*/
+.product-item{
+    margin: 20px;
+    border:3px solid #ffffff;
+    max-width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    font-size: large;
+}
+.addtocart{
+    padding:5px;
+    border-radius: 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: larger;
+    margin: 20px;
+}
+.addtocart:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.addtocart:active{
+    background-color:rgb(255,176,46) ;
 }

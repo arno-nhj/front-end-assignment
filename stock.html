@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <meta name="viewport" content="height=device-height, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="main.css">
     <head>
-        <center><img src="Sahara Icon.jpg" alt="Sahara Icon" style="width:1024px;height:256px;"></center>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <meta name="viewport" content="height=device-height, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
         <title>Hongji Nie 39150534</title>
     </head>
     <body>
-        <center><h1>😄Welcome to Sahara😄</h1></center>
-        <center><h2>Biggest brand, lowest price</h2></center>
         <nav>
-            
-            <center><a href="course work.html">Sahara</a>
-                <a href="stock.html">Stock</a>
-                <a href="basket.html">Basket</a></center>
-            <a href="sign up.html" style="float: right">Sign up</a>
+            <img src="SaharaIcon.png" alt="Sahara Icon" style="height:64px;max-width: fit-content;">
+            <ul>
+                <li><a href="coursework.html">Sahara</a></li>
+                <li><a href="stock.html">Stock</a></li>
+                <li><a href="basket.html">Basket</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+            </ul>
         </nav>
+        <div style="justify-content: center;align-items: center;display: flex;">
+            <h1>😄Welcome to Sahara😄<br></h1>
+        </div>
+        <div style="justify-content: center;align-items: center;display: flex;">
+            <h2>Biggest brand, lowest price</h2>
+        </div>
+        
+        <div class="product-item" style="max-width: 100%;">
+            <img src="item1.png" alt="item1" style="max-width: 25%;">
+            <h3>item1</h3>
+            <p>Price:￡25.00</p>
+            <button class="addtocart" onclick="addToCart('item1',25.00)">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="item2.png" alt="item2" style="max-width: 25%;">
+            <h3>item2</h3>
+            <p>Price:￡75.00</p>
+            <button class="addtocart" onclick="addToCart('item2',75.00)">Add to Cart</button>
+        </div>
+        <div class="product-item" style="max-width: 100%;">
+            <img src="item3.png" alt="item3" style="max-width: 25%;">
+            <h3>item3</h3>
+            <p>Price:￡100.00</p>
+            <button class="addtocart" onclick="addToCart('item3',100.00)">Add to Cart</button>
+        </div>
+        <div class="product-item" style="max-width: 100%;">
+            <img src="item4.png" alt="item4" style="max-width: 25%;">
+            <h3>item4</h3>
+            <p>Price:￡200.00</p>
+            <button class="addtocart" onclick="addToCart('item4',200.00)">Add to Cart</button>
+        </div>
+        <p id="aboutus">Sahara enable you to purchase everything you want in the lowest price you couldn't imagine.<br>
+            Contact us:<br>
+            Phone: 07536922175
+            Email:niehongji9@gmail.com
+        </p>
+        <footer>
+            <p style="float:right">&copy;Sahara Co</p>
+        </footer>
+        <script>
+            let cart = [];
+            function addToCart(productName, price) {
+                cart.push({ productName, price });
+                updateCart();
+            }
+            function updateCart() {
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+        </script>
     </body>
-    <footer>
-        <p style="float:right">&copy;Sahara Co</p>
-    </footer>
 </html>
